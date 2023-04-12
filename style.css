@@ -1,0 +1,330 @@
+:root {
+    --main-color: #343434;
+    --light-gray: #f7f7f7;
+}
+
+body {
+    padding    : 0%;
+    margin     : 0%;
+    box-sizing : border-box;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-color);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    position : relative;
+    z-index  : 5;
+}
+
+.section-title::after {
+    content          : " ";
+    background-image : url(./images/dots.png);
+    background-repeat: repeat;
+    z-index          : -1;
+    width            : 15%;
+    height           : 20%;
+    top              : 50%;
+    left             : 50%;
+    transform        : translateX(-50%);
+    position         : absolute;
+}
+
+.settings {
+    width      : 20%;
+    height     : 15%;
+    position   : fixed;
+    top        : 30%;
+    left       : 0;
+    z-index    : 500;
+    display    : flex;
+    align-items: flex-start;
+
+}
+
+.box {
+    width : 85%;
+    height: 85%;
+    cursor: pointer;
+}
+
+.settings-inner {
+    width           : 80%;
+    height          : 100%;
+    background-color: var(--main-color);
+    opacity         : 70%;
+    z-index         : 55;
+}
+
+.settings-icon {
+    width     : 20%;
+    background: var(--light-gray);
+    cursor    : pointer;
+
+}
+
+
+#home {
+    background-image   : url(./images/bg.jpg);
+    height             : 100vh;
+    background-position: center top;
+    background-size    : cover;
+}
+
+.overlay {
+    height          : 100%;
+    width           : 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding-top     : 2%;
+}
+
+#home nav .nav-item {
+    position : relative;
+    font-size: 0.9rem;
+}
+
+#home nav .nav-item .nav-link::after {
+    content         : " ";
+    background-color: var(--main-color);
+    width           : 0%;
+    height          : 4%;
+    position        : absolute;
+    top             : 80%;
+    left            : 10%;
+    transition      : all 0.5s;
+}
+
+#home .nav-item:first-child .nav-link::after {
+    content         : " ";
+    background-color: var(--main-color);
+    width           : 80%;
+    height          : 4%;
+    position        : absolute;
+    top             : 80%;
+    left            : 10%;
+    transition      : all 0.5s;
+}
+
+#home nav .nav-item:hover .nav-link::after {
+    width: 80%;
+}
+
+.home-content {
+    color: white;
+}
+
+.home-content h1,
+.home-content p {
+    font-size : 3.2rem;
+    margin-top: 1rem;
+}
+
+.home-content p {
+    font-weight: 200;
+}
+
+.home-content span {
+    font-weight: 400;
+}
+
+.home-content i {
+    font-size       : 1rem;
+    background-color: var(--main-color);
+    padding         : 1rem;
+    border-radius   : 50%;
+    width           : 2rem;
+    height          : 2rem;
+    margin          : 1rem 0.2rem;
+}
+
+.home-content .icons,
+.home-content i {
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+}
+
+.hero-pic::after {
+    content          : " ";
+    background-image : url(./images/dots.png);
+    background-repeat: repeat;
+    z-index          : -1;
+    width            : 80%;
+    height           : 80%;
+    bottom           : -30;
+    left             : 0;
+    position         : absolute;
+}
+
+.progress {
+    height: 5%;
+}
+
+.progress-bar {
+    background-color: var(--main-color);
+}
+
+.about-me-btn {
+    background: var(--main-color);
+    color     : white;
+    transition: all 0.3s;
+}
+
+.about-me-btn:hover {
+    background: white;
+    border    : 1px solid var(--main-color);
+
+}
+
+#services {
+    background-color: var(--light-gray);
+}
+
+.services-icon {
+    padding         : 2rem;
+    width           : 2rem;
+    height          : 2rem;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: var(--light-gray);
+    border-radius   : 50%;
+    transition      : all 0.3s;
+}
+
+.services-icon:hover {
+    color           : var(--light-gray);
+    background-color: var(--main-color);
+}
+
+#works .nav .nav-item .nav-link {
+    color      : var(--main-color);
+    background : transparent;
+    font-weight: 800;
+}
+
+.item-layer {
+    background-color: white;
+    position        : absolute;
+    top             : 5%;
+    left            : 5%;
+    right           : 5%;
+    bottom          : 2%;
+    opacity         : 0;
+    transition      : all 0.5s;
+}
+
+.item-layer .icons {
+    transition: all 0.5s;
+}
+
+.item-layer .icons {
+    margin-top: 5%;
+    width     : 40%;
+    text-align: center;
+}
+
+.item-layer .icons i {
+    background-color: var(--main-color);
+    color           : white;
+    border-radius   : 50%;
+    padding         : 5%;
+    transition      : all 0.3s;
+}
+
+.icons i:hover {
+    background-color: white;
+    color           : var(--main-color);
+    border          : 1px solid var(--main-color);
+}
+
+.item-card:hover .item-layer {
+    top    : 2%;
+    opacity: 1;
+}
+
+.item-card:hover .item-layer .icons {
+    margin-top: 0% !important;
+}
+
+#clients,
+#blog {
+    background-color: var(--light-gray);
+}
+
+.clients-title {
+    font-size: 2.5rem;
+    position : relative;
+    z-index  : 5;
+}
+
+.clients-title::after {
+    content          : " ";
+    background-image : url(./images/dots.png);
+    background-repeat: repeat;
+    z-index          : -1;
+    width            : 22%;
+    height           : 20%;
+    top              : 50%;
+    left             : 50%;
+    transform        : translateX(-50%);
+    position         : absolute;
+}
+
+.carousel-indicators button {
+    background-color: var(--main-color) !important;
+    width           : 10px !important;
+    height          : 10px !important;
+    border-radius   : 50%;
+}
+
+/* .read-more::after{
+    content: " ";
+    width: 100%;
+    height: 20%;
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+} */
+
+#contact i {
+    font-size: 1.5rem;
+}
+
+.form-control {
+    background-color: var(--light-gray);
+    border          : 0;
+    font-size       : 0.9rem;
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .settings{
+        display: none;
+    }
+}
